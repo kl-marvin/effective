@@ -15,18 +15,25 @@ class UserRegistrationType extends AbstractType
     {
         $builder
         ->add('email', EmailType::class, [
-            'label' => 'Votre Email',
-            'required' => true
+            'label' => false,
+            'required' => true,
+            'attr' => ['placeholder' => 'Email'],
         ])
         ->add('password', PasswordType::class, [
-            'label' => 'Mot de Passe',
-             'required' => true
+            'label' => false,
+             'required' => true,
+             'attr' => ['placeholder' => 'Password'],  
         ])
         ->add('name', null, [
-            'label' => 'Nom',
-            'required' => true
+            'label' => false,
+            'required' => true,
+            'attr' => ['placeholder' => 'Last Name']
         ])
-        ;
+        ->add('firstName', null, [
+            'label' => false,
+            'required' => true,
+            'attr' => ['placeholder' => 'First Name'],
+        ]);
     }
 
     public function configureOptions(OptionsResolver $resolver)

@@ -1,4 +1,40 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Effective.com | Inscription{% endblock %}
+{% block title %}Effective.com | Resgistration {% endblock %}
+
+{% block body %}
+
+{% form_theme form 'bootstrap_4_layout.html.twig' %}
+
+<div class"container">
+    <div class="row">
+        <div class="registration offset-4 col-4 offset-4">
+            <h1 class="text-center registration-title">Sign up</h1>
+            <p class="text-center registration-text">Complete the form below to create your account.</p>
+
+             {{ form_start(form) }} 
+
+            <div class="row">
+                <div class="offset-1 col-5">{{ form_row(form.firstName) }}</div>
+                <div class="col-5">{{ form_row(form.name) }}</div>
+            </div>
+            <div class="row">
+                <div class="offset-1 col-10 offset-1">{{ form_row(form.email) }}</div>
+                <div class="offset-1 col-10 offset-1">{{ form_row(form.password) }}</div>
+            </div>    
+            <div class="text-center mt-3">
+                <button class="registration-btn" type="submit">Sign up</button>
+            </div>
+
+            {{ form_end(form) }}
+
+            <div class="registration-SignUp text-center">
+                <div>Already have an account ?</div>
+                    <a href="{{ path("app_login") }}" class="registration-link">Sign in </a>
+                </div>
+            </div>
+    </div>
+</div>
+{% endblock %}
+
 

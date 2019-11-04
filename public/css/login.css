@@ -1,0 +1,79 @@
+.effective{ 
+    height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+
+   /** 
+   background-image: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+    */
+
+
+    /**
+    background-image: linear-gradient(to right top, #c02d80, #b94ca0, #ae65ba, #a07ccf, #9290dd, #8a93e3, #8097e9, #749aef, #698ff4, #6283f8, #5e77fa, #5f69fb);
+    */
+
+    
+    background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+
+
+}
+
+.login{
+    background-color: white!important;
+    padding-top:5%;
+    padding-bottom: 2%;
+    border-radius: 8px;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
+    margin-top: 22%;
+ 
+}
+
+.login-title{
+    color:darkgray;
+    margin-bottom: 9%;
+}
+
+.login-btn{
+    background-attachment: fixed;
+    padding-left: 25%;
+    padding-right: 25%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    color: white;
+    border-radius: 3px;
+    cursor: pointer;
+    border: white;
+    font-size: 14px;
+    background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+
+}
+
+.login-btn:hover{
+    
+        opacity: 0.9; 
+}
+
+.login-password-div{
+    text-align: right!important;
+}
+
+.login-password-link{
+    text-decoration:none;
+    color: darkgray;
+    font-size: 12px;
+}
+
+.login-SignUp{
+    font-size: 13px;
+    color:darkgray;
+    margin-top:18%;
+
+}
+
+.login-link{
+    font-weight: bolder;
+    text-decoration:none;
+    color: darkgray
+}

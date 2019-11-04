@@ -38,6 +38,11 @@ class User implements UserInterface
      */
     private $name;
 
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $firstName;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -124,6 +129,18 @@ class User implements UserInterface
     public function setName(string $name): self
     {
         $this->name = $name;
+
+        return $this;
+    }
+
+    public function getFirstName(): ?string
+    {
+        return $this->firstName;
+    }
+
+    public function setFirstName(string $firstName): self
+    {
+        $this->firstName = $firstName;
 
         return $this;
     }

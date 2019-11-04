@@ -80,8 +80,8 @@ class SecurityController extends AbstractController
             $form->handleRequest($request);
 
 
-            if($form->isSubmitted() && $form->valid()){
-                $user->setRole(['ROLE_USER']);
+            if($form->isSubmitted() && $form->isValid()){
+                $user->setRoles(['ROLE_USER']);
                 $user->setPassword($this->encoder->encodePassword($user, $user->getPassword()));
                 $this->em->persist($user);
                 $this->em->flush();
@@ -91,7 +91,6 @@ class SecurityController extends AbstractController
                 'form' => $form->createView(),
                 'user' => $this->getUser()
             ]);
-          
-
+        
     }
 }
