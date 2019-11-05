@@ -1,8 +1,30 @@
 {% extends 'base.html.twig' %}
-
 {% block title %}Effective.com | Home{% endblock %}
-
 {% block body %}
-
-<h1>Effective Dashboard</h1>
+    <div class="container-fluid mt-5">
+        <div class="row">
+            <div class="task-card offset-1 col-2">
+                <div class="task-header">
+                    <h1>My Day</h1>
+                </div>
+                <div class="task-body">
+                    {% for task in tasks %}
+                        <div class="tasks">
+                            <form method="post" action="{{ path('task.delete', {id: task.id}) }}" style="display: inline-block;">
+                            <input type="hidden" name="_method" value="DELETE"><button class="circle"></button>
+                            </form>{{task.name}}<br>
+                        </div> 
+                    {% endfor %}
+                </div>
+                <div class="task-footer">
+                    {{ form_start(form) }}
+                        <button class="btn-task" type="submit">
+                        <img src="{{ asset('img/plus-2.png') }}" alt="image" width="18">
+                        </button>
+                        <span class="form-field"> {{ form_row(form.name) }}</span>
+                    {{ form_end(form) }} 
+                </div>
+            </div>
+        </div>
+    </div>
 {% endblock %}

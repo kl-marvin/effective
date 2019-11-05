@@ -1,0 +1,80 @@
+
+.task-card{
+    border-radius:15px;
+    padding:7px;
+    background-color: white;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.task-header{
+    color:black;
+}
+
+.task-body{
+    border-bottom:1px solid darkgrey;
+    min-height: 18em;
+    color: darkgray;
+    overflow: scroll!important;
+    min-height: 20em;
+    max-height: 20em;     
+}
+
+.task-footer{
+    padding-bottom: 5px;
+    padding-top:5px;
+}
+
+.circle{
+    display: inline-block!important;
+    background-color:whitesmoke; 
+    border: solid 1px darkgrey;
+    height: 18px;
+    width: 18px;
+    border-radius: 10000px;
+    margin-right: 5px;
+    margin-bottom: -3px;
+    cursor: pointer;
+}
+
+.circle:hover{
+    background-color:darkgray;
+    opacity: 0.7; 
+}
+
+.circle:focus {
+    outline-color: transparent;
+    outline-style: none;
+}
+
+.form-field{
+    display: inline-block;
+}
+
+.btn-task{
+  
+   color:white;
+   border:none;
+   cursor:pointer;
+   padding-right: 1px;
+   background-color: white;
+}
+
+#add_task_name{
+    background-color: white;
+    border:none;
+    color: #3481d9;
+    font-size: 14px;
+    opacity: 1!important;
+}
+
+#add_task_name::placeholder{
+    color:#3481d9;
+    opacity: 1.0;
+}
+
+#add_task_name:focus {
+    outline-color: transparent;
+    outline-style: none;
+  }
+
+
