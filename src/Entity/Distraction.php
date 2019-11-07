@@ -16,6 +16,12 @@ class Distraction
      */
     private $id;
 
+     /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\User")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $user;
+
     /**
      * @ORM\Column(type="string", length=255)
      */
@@ -25,6 +31,11 @@ class Distraction
      * @ORM\Column(type="datetime")
      */
     private $date;
+
+    public function __construct()
+    {
+        $this->date = new \DateTime('now');
+    }
 
     public function getId(): ?int
     {
@@ -51,6 +62,18 @@ class Distraction
     public function setDate(\DateTimeInterface $date): self
     {
         $this->date = $date;
+
+        return $this;
+    }
+
+    public function getUser(): ?User
+    {
+        return $this->user;
+    }
+
+    public function setUser(?User $user): self
+    {
+        $this->user = $user;
 
         return $this;
     }
