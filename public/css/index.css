@@ -7,7 +7,7 @@
 }
 
 .task-header{
-    color:black;
+    color:rgb(44, 39, 39);
 }
 
 .task-body{
@@ -47,8 +47,9 @@
 }
 
 .form-field{
-    display: inline-block;
+    display: inline-block!important;
 }
+
 
 .btn-task{
   
@@ -77,4 +78,44 @@
     outline-style: none;
   }
 
+  #add_distraction_name{
+    background-color: white;
+    border:none;
+    color: #3481d9;
+    font-size: 14px;
+    opacity: 1!important;
+}
 
+#add_distraction_name::placeholder{
+    color:#3481d9;
+    opacity: 1.0;
+}
+
+#add_distraction_name:focus {
+    outline-color: transparent;
+    outline-style: none;
+  }
+
+ .welcomeMessage{
+      color: white!important;
+      margin-bottom: 2%;
+  }
+
+  #hour{
+      font-size: 2.3em;
+      margin-left: 1%;
+  }
+
+
+  .welcomeMessage2{
+      color: white;
+      margin-top: 12%;
+  }
+
+  .greeting2{
+      font-size: 3.6em;
+  }
+
+  #hour2{
+      font-size: 3.6em;
+  }

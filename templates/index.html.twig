@@ -1,10 +1,19 @@
 {% extends 'base.html.twig' %}
 {% block title %}Effective.com | Home{% endblock %}
 {% block body %}
-    <div class="container-fluid mt-5">
-        <div class="row">
-            <div class="task-card offset-1 col-2">
-                <div class="task-header">
+  <div class="container-fluid">
+    <div class="row">
+        <div class="offset-11 mt-2">
+           <a href="{{ path('app_logout') }}" ><img src="{{ asset('img/logout.png') }}" alt="logout" width="23" ></a>
+        </div>
+    </div>
+    <div class="row pb-5">
+        <div class="welcomeMessage d-xl-none col-lg-12 col-md-12 col-sm-12 col-12">
+            <h1><span class="greeting">Hello,</span> {{ user.name }}</h1>
+            <div id="hour"></div>
+        </div>
+        <div class="task-card mt-2 offset-xl-1 col-xl-2 offset-lg-1 col-lg-4 offset-md-1 col-md-4 offset-sm-2 col-sm-8 offset-2 col-8">
+              <div class="task-header">
                     <h1>My Day</h1>
                 </div>
                 <div class="task-body">
@@ -24,7 +33,33 @@
                         <span class="form-field"> {{ form_row(form.name) }}</span>
                     {{ form_end(form) }} 
                 </div>
-            </div>
+        </div>
+        <div class="welcomeMessage2 d-none d-xl-block name col-xl-8 col-lg-8">
+            <h1 class="greeting2"><span class="greeting">Hello,</span> {{ user.name }}</h1>
+            <div id="hour2"></div>
+        </div>
+        <div class="task-card mt-2 offset-xl-1 col-xl-2 offset-lg-2 col-lg-4 offset-md-2 col-md-4 offset-sm-2 col-sm-8 offset-2 col-8">
+                                <div class="task-header">
+                    <h1>Distraction</h1>
+                </div>
+                <div class="task-body">
+                    {% for distraction in distractions %}
+                        <div class="tasks">
+                            <form method="post" action="{{ path('distraction.delete', {id: distraction.id}) }}" style="display: inline-block;">
+                            <input type="hidden" name="_method" value="DELETE"><button class="circle"></button>
+                            </form>{{distraction.name}}<br>
+                        </div> 
+                    {% endfor %}
+                </div>
+                <div class="task-footer">
+                    {{ form_start(form2) }}
+                        <button class="btn-task" type="submit">
+                        <img src="{{ asset('img/plus-2.png') }}" alt="image" width="18">
+                        </button>
+                        <span class="form-field"> {{ form_row(form2.name) }} </span>
+                    {{ form_end(form2) }} 
+                </div>
         </div>
     </div>
+</div>
 {% endblock %}

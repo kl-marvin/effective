@@ -35,14 +35,6 @@ class EffectiveController extends AbstractController
     }
 
     /**
-     * @Route("/test", name="test")
-     * @IsGranted("ROLE_USER")
-     */
-    public function test(){
-        return $this->render('test.html.twig');
-    }
-
-    /**
      * @Route("/", name="homepage")
      * @IsGranted("ROLE_USER")
      * @param Task $task
